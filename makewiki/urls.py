@@ -33,6 +33,9 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
 
     #to link urls in Account App
-    path('accounts/', include('accounts.urls'))
+    path('accounts/', include('accounts.urls')),
+
+    #to link urls in API app 
+    path('api/', include('api.urls'))
 
 ]
