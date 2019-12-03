@@ -128,6 +128,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#Your project will probably also have static assets that aren’t tied to a particular app. 
+#In addition to using a static/ directory inside your apps
+#you can define a list of directories (STATICFILES_DIRS) in your settings file where Django will also look for static files.
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+
 # wiki app settings
 WIKI_PAGE_TITLE_MAX_LENGTH = 600
 

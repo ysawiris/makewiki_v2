@@ -26,13 +26,13 @@ class PageDetailView(DetailView):
         return render(request, 'page.html', {'page': page})
 
 class PageCreateNewView(CreateView):
-  def get(self, request):
-    content = {'form': PageForm()}
-    return render(request, 'create_new.html', content)
+    def get(self, request):
+      content = {'form': PageForm()}
+      return render(request, 'create_new.html', content)
   
-  def post(self, request):
-    form = PageForm(request.POST)
-    if form.is_valid():
-      form.save()
-      return HttpResponseRedirect(reverse_lazy('wiki-list-page'))
-    return render(request, 'create_new.html', {'form': form})
+    def post(self, request):
+      form = PageForm(request.POST)
+      if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse_lazy('wiki-list-page'))
+      return render(request, 'create_new.html', {'form': form})

@@ -1,6 +1,8 @@
 <div class="card mb-3">
   <h5 class="card-header ">{{ page.title }}</h5>
   <div class="card-body border-dark">
+    {% load static %}
+      <img src="{% static "image1.jpeg" %}" alt="My image">
     <p class="card-text text-dark">
       {{ page.content|truncatewords_html:30 }}
       <hr>
