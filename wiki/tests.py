@@ -63,5 +63,3 @@ class PageDetailView_Test(TestCase):
         reponse = self.client.get("/my-test-page/")
 
         self.assertEqual(reponse.status_code, 200)
-
-r
